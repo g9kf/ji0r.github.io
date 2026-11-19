@@ -1,91 +1,732 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>PPRO installer slideshow</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>سوقك إسراء | Esra Güzellik Merkezi</title>
+
+<meta name="description" content="سوقك إسراء - Esra Güzellik Merkezi - معلومات الشركة والنشاط التجاري وطرق التواصل.">
+
 <style>
+:root {
+  --main: #a76b88;
+  --dark: #302b30;
+  --gray: #807780;
+  --bg: #faf8f9;
+  --line: #eee5e9;
+  --pink: #fbf0f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 html {
-		background-color: #fff;
+  scroll-behavior: smooth;
 }
-* {box-sizing: border-box;}
+
 body {
-	margin:0px;}
-.mySlides {opacity: 0; position: absolute; transition: all 1s;}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 445px;
-  position: relative;
-  margin: auto;
-  cursor: pointer;
+  margin: 0;
+  background: var(--bg);
+  color: var(--dark);
+  font-family: Tahoma, Arial, sans-serif;
+  line-height: 1.8;
 }
 
-/* Caption text */
-.text {
-  font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #fff;
-  font-weight: 450;
+.container {
+  width: 92%;
+  max-width: 850px;
+  margin: auto;
+}
+
+header {
+  background: white;
+  border-bottom: 1px solid var(--line);
+  padding: 18px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  color: var(--main);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.logo small {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: var(--gray);
+  direction: ltr;
+  text-align: right;
+}
+
+header a {
+  color: var(--main);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.hero {
+  background: white;
+  padding: 65px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.symbol {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 23px;
+  background: var(--pink);
+  border-radius: 50%;
+  color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 37px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: clamp(31px, 6vw, 47px);
+  margin: 0;
+  color: var(--dark);
+}
+
+.hero .turkish {
+  direction: ltr;
+  color: var(--main);
+  font-size: clamp(20px, 4vw, 27px);
+  font-weight: bold;
+  margin-top: 7px;
+}
+
+.hero .subtitle {
+  font-size: 18px;
+  color: var(--gray);
+  margin-top: 12px;
+}
+
+.hero p {
+  color: var(--gray);
   font-size: 15px;
-  letter-spacing: .3;
-  padding-left: 20px;
-  position: absolute;
-  bottom: 95px;
-  width: 30%;
+  max-width: 550px;
+  margin: 25px auto;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.tags span {
+  background: var(--pink);
+  color: var(--main);
+  border-radius: 25px;
+  padding: 7px 17px;
+  font-size: 13px;
+}
+
+main {
+  padding: 35px 0;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 15px 20px;
+  background: #fcf3f7;
+  border-right: 4px solid var(--main);
+  font-size: 19px;
+}
+
+.content {
+  padding: 10px 22px;
+}
+
+.company-names {
+  text-align: center;
+  padding: 35px 15px;
+}
+
+.company-names .name1 {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.company-names .name2 {
+  font-size: 26px;
+  color: var(--main);
+  font-weight: bold;
+  direction: ltr;
+}
+
+.company-names .name3 {
+  margin-top: 15px;
+  font-size: 21px;
+  color: var(--dark);
+}
+
+.company-names .name4 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--gray);
+}
+
+.company-names .name5 {
+  margin-top: 12px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: var(--main);
+  direction: ltr;
+}
+
+.company-names .name6 {
+  margin-top: 12px;
+  font-size: 16px;
+  color: var(--gray);
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--main);
+  margin: 22px auto;
+}
+
+.name-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.name-grid div {
+  background: var(--pink);
+  color: var(--main);
+  padding: 16px;
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+  padding: 13px 0;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.value a {
+  text-decoration: none;
+  color: var(--main);
+}
+
+.status {
+  color: #218052;
+}
+
+.contact {
+  background: var(--main);
+  color: white;
+  text-align: center;
+  padding: 38px 20px;
+  border-radius: 12px;
+}
+
+.contact h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.contact .turkish {
+  direction: ltr;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.contact p {
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.contact a {
+  display: inline-block;
+  background: white;
+  color: var(--main);
+  text-decoration: none;
+  padding: 11px 22px;
+  margin: 7px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray);
+  margin: 25px auto;
+}
+
+footer {
+  background: white;
+  border-top: 1px solid var(--line);
+  padding: 35px 15px;
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-	font-family: 'AdobeClean', Helvetica, Arial, sans-serif;
-  color: #f2f2f2;
+footer .arabic {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+footer .turkish {
+  color: var(--main);
+  font-size: 21px;
+  font-weight: bold;
+  direction: ltr;
+}
+
+footer .small {
+  color: var(--gray);
   font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  margin-top: 15px;
 }
 
-.active {
-  background-color: #717171;
-}
+@media(max-width:600px) {
+  .hero {
+    padding: 45px 15px;
+  }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
-  animation-name: fade;
-  animation-duration: 1s;
-}
+  .row {
+    flex-direction: column;
+    gap: 3px;
+  }
 
-@-webkit-keyframes fade {
-  from {opacity: .7}
-  to {opacity: 1}
-}
+  .value {
+    text-align: right;
+  }
 
-@keyframes fade {
-  from {opacity: .1}
-  to {opacity: 1}
-}
+  .content {
+    padding: 10px 16px;
+  }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+  .contact a {
+    display: block;
+    max-width: 280px;
+    margin: 10px auto;
+  }
+
+  .name-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-names .name1 {
+    font-size: 28px;
+  }
+
+  .company-names .name2 {
+    font-size: 21px;
+  }
 }
 </style>
 </head>
+
 <body>
-<div class="slideshow-container" id="slideContainer" href="#">
 
-<div class="mySlides fade" style="opacity: 1; visibility: visible;">
-    <video class="videos" autoplay loop muted style="width: 445px; height: 239px;"><source src="images/01_creativity_for_all_445x239.mp4" style="width: 445px; height: 239px;"></video>
-    <div class="text" id="slideText1">Creativity for all.</div>
+<!-- Header -->
+
+<header>
+  <div class="container header-content">
+
+    <div class="logo">
+      سوقك إسراء
+      <small>Esra Güzellik Merkezi</small>
+    </div>
+
+    <a href="#contact">تواصل معنا</a>
+
+  </div>
+</header>
+
+<!-- Main Section -->
+
+<section class="hero">
+
+  <div class="symbol">E</div>
+
+  <h1>سوقك إسراء</h1>
+
+  <div class="turkish">
+    Esra Güzellik Merkezi
+  </div>
+
+  <div class="subtitle">
+    مركز إسراء للجمال
+  </div>
+
+  <p>
+    مرحبًا بكم في سوقك إسراء.
+    تعرفوا على معلومات الشركة
+    ونشاطها التجاري وطرق التواصل معنا.
+  </p>
+
+  <div class="tags">
+    <span>سوقك إسراء</span>
+    <span>Esra Güzellik Merkezi</span>
+    <span>إسراء</span>
+    <span>ESRA</span>
+    <span>مركز إسراء</span>
+  </div>
+
+</section>
+
+<main class="container">
+
+<!-- Company Names -->
+
+<section class="card">
+
+  <h2>أسماء الشركة | Company Names</h2>
+
+  <div class="company-names">
+
+    <div class="name1">
+      سوقك إسراء
+    </div>
+
+    <div class="name2">
+      Esra Güzellik Merkezi
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="name3">
+      مركز إسراء للجمال
+    </div>
+
+    <div class="name4">
+      إسراء للجمال والعناية
+    </div>
+
+    <div class="name5">
+      ESRA GÜZELLİK MERKEZİ
+    </div>
+
+    <div class="name6">
+      إسراء | Esra
+    </div>
+
+    <div class="name6">
+      سوقك إسراء - ESRA
+    </div>
+
+    <div class="name-grid">
+      <div>سوقك إسراء</div>
+      <div dir="ltr">ESRA</div>
+      <div>مركز إسراء</div>
+      <div dir="ltr">Esra Güzellik</div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Company Information -->
+
+<section class="card">
+
+  <h2>معلومات الشركة</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">الاسم التجاري</span>
+      <span class="value">
+        Esra Güzellik Merkezi
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الاسم بالعربية</span>
+      <span class="value">
+        سوقك اسراء
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">رقم السجل التجاري</span>
+      <span class="value">
+        186791010
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الشكل القانوني</span>
+      <span class="value">
+        من الشركات الكبرى
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">حالة السجل حسب المستند</span>
+      <span class="value status">
+        نشط - Active
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ التسجيل</span>
+      <span class="value">
+        2023/08/20
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">استثمار أجنبي</span>
+      <span class="value">
+        نعم - Yes
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ انتهاء السجل</span>
+      <span class="value">
+        11/12/2028
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- License Information -->
+
+<section class="card">
+
+  <h2>معلومات النشاط والترخيص</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">رقم الترخيص</span>
+      <span class="value">
+        L1028610
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تعريف الترخيص</span>
+      <span class="value">
+        LD-1883
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">النشاط المسجل</span>
+      <span class="value">
+        خدمات الترويج والتسويق
+        على المواقع الإلكترونية
+        ووسائل التواصل الاجتماعي
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">مدة الترخيص</span>
+      <span class="value">
+        12 شهرًا
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الإصدار الأول</span>
+      <span class="value">
+        25/06/2023
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">تاريخ الإصدار</span>
+      <span class="value">
+        2024/08/20
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">انتهاء الترخيص</span>
+      <span class="value">
+        11/12/2028
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact Information -->
+
+<section class="card">
+
+  <h2>معلومات التواصل</h2>
+
+  <div class="content">
+
+    <div class="row">
+      <span class="label">رقم الهاتف</span>
+      <span class="value">
+        <a href="tel:+966567876667">
+          +966567876667
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">البريد الإلكتروني</span>
+      <span class="value">
+        <a href="mailto:Ot@ji0r.github.io">
+          Ot@ji0r.github.io
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الموقع الإلكتروني</span>
+      <span class="value">
+        <a href="https://ji0r.github.io"
+           target="_blank"
+           rel="noopener noreferrer">
+          ji0r.github.io
+        </a>
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">العنوان</span>
+      <span class="value">
+        طريق الملك سلمان،
+        العليا، الرياض،
+        11234،
+        المملكة العربية السعودية
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">الرمز البريدي</span>
+      <span class="value">
+        11234
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact Section -->
+
+<section class="contact" id="contact">
+
+  <h2>تواصل مع سوقك إسراء</h2>
+
+  <div class="turkish">
+    Esra Güzellik Merkezi
+  </div>
+
+  <p>
+    يسعدنا استقبال استفساراتكم
+    والتواصل معكم.
+  </p>
+
+  <a href="tel:+966567876667">
+    اتصال هاتفي
+  </a>
+
+  <a href="mailto:Ot@ji0r.github.io">
+    البريد الإلكتروني
+  </a>
+
+  <a href="https://wa.me/966567876667"
+     target="_blank"
+     rel="noopener noreferrer">
+    واتساب
+  </a>
+
+  <a href="https://ji0r.github.io"
+     target="_blank"
+     rel="noopener noreferrer">
+    زيارة الموقع
+  </a>
+
+</section>
+
+<div class="note">
+  هذه صفحة تعريفية تعرض المعلومات الواردة
+  في المستند المرفق، دون تحقق مستقل.
+  وليست شهادة رسمية أو وسيلة حكومية للتحقق
+  من التسجيل أو الترخيص.
+  أسماء العرض الإضافية ليست أسماء قانونية مسجلة.
 </div>
 
-</div>
+</main>
 
-<script type="text/javascript" src="lib/jquery.min.js"></script>
-<script type="text/javascript" src="carousel.js"></script>
+<!-- Footer -->
+
+<footer>
+
+  <div class="arabic">
+    سوقك إسراء
+  </div>
+
+  <div class="turkish">
+    Esra Güzellik Merkezi
+  </div>
+
+  <div class="small">
+    إسراء | ESRA
+    <br>
+    مركز إسراء للجمال
+    <br>
+    © 2026 Esra Güzellik Merkezi
+    <br>
+    ji0r.github.io
+    <br>
+    Riyadh, Saudi Arabia - 11234
+  </div>
+
+</footer>
+
 </body>
 </html>
